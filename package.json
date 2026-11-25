@@ -1,0 +1,23 @@
+{
+  "name": "claude-agent-kit",
+  "version": "1.0.0",
+  "description": "Stack-agnostic parallel agent team setup for Claude Code: setup wizard, agents/skills/commands generator, activity dashboard.",
+  "bin": {
+    "claude-agent-kit": "install.js",
+    "agent-kit": "install.js"
+  },
+  "files": [
+    "install.js",
+    "template/",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YashPatel117/claude-agent-kit.git"
+  },
+  "homepage": "https://github.com/YashPatel117/claude-agent-kit#readme"
+}
