@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // agent-kit installer — copies the kit into any project.
 //
+//   npx @yashpatel117/agent-kit [project-path] [--dry-run] [--force]                 (from npm)
 //   npx github:YashPatel117/claude-agent-kit [project-path] [--dry-run] [--force]   (from GitHub)
 //   node install.js [project-path] [--dry-run] [--force]           (local copy)
 //   project-path defaults to the current folder.

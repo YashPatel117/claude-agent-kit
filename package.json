@@ -1,5 +1,5 @@
 {
-  "name": "claude-agent-kit",
+  "name": "@yashpatel117/agent-kit",
   "version": "1.0.0",
   "description": "Stack-agnostic parallel agent team setup for Claude Code: setup wizard, agents/skills/commands generator, activity dashboard.",
   "bin": {
@@ -19,5 +19,8 @@
     "type": "git",
     "url": "git+https://github.com/YashPatel117/claude-agent-kit.git"
   },
-  "homepage": "https://github.com/YashPatel117/claude-agent-kit#readme"
+  "homepage": "https://github.com/YashPatel117/claude-agent-kit#readme",
+  "publishConfig": {
+    "access": "public"
+  }
 }

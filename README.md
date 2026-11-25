@@ -9,13 +9,14 @@ You install it, tell it your stack and the agents you want, and it generates the
 Requires Node 18+ and Claude Code. Run inside your project folder:
 
 ```bash
-npx github:YashPatel117/claude-agent-kit              # latest
-npx github:YashPatel117/claude-agent-kit#v1.0.0       # a pinned version (git tag)
-npx github:YashPatel117/claude-agent-kit --dry-run    # preview only
-npx github:YashPatel117/claude-agent-kit ../other-project   # install somewhere else
+npx @yashpatel117/agent-kit                    # latest, from npm
+npx @yashpatel117/agent-kit@1.0.0              # a pinned version
+npx @yashpatel117/agent-kit --dry-run          # preview only
+npx @yashpatel117/agent-kit ../other-project   # install somewhere else
 ```
 
-Without hosting, from a local copy: `node path/to/agent/install.js [project-path]`.
+Straight from GitHub instead: `npx github:YashPatel117/claude-agent-kit` (pin with `#v1.0.0`).
+From a local copy: `node path/to/agent/install.js [project-path]`.
 
 Re-run the same command any time to update the kit; your files are kept.
 
@@ -96,7 +97,14 @@ Delete `.claude/activity/` to clear the history. Hooks add roughly 50–100 ms p
 
 1. Change files, then bump `version` in `package.json`.
 2. `git commit`, `git tag v1.1.0`, `git push --follow-tags`.
-3. Projects update by re-running `npx github:YashPatel117/claude-agent-kit` (or `#v1.1.0`).
+3. Publish to npm without saving the token anywhere (PowerShell; the token lives only in this terminal):
+   ```powershell
+   $s = Read-Host -AsSecureString "npm token"
+   $env:NPM_TOKEN = [Runtime.InteropServices.Marshal]::PtrToStringBSTR([Runtime.InteropServices.Marshal]::SecureStringToBSTR($s))
+   npm publish "--//registry.npmjs.org/:_authToken=$env:NPM_TOKEN"
+   Remove-Item Env:NPM_TOKEN
+   ```
+4. Projects update by re-running `npx @yashpatel117/agent-kit` (or `npx github:YashPatel117/claude-agent-kit`).
 
 ## Uninstall
 
